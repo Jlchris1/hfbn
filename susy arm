@@ -3,7 +3,7 @@
 
 -- Instances:
 
-local ScreenGui = Instance.new("ScreenGui")
+local susyarms = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local pepescript = Instance.new("TextButton")
 local ogemote = Instance.new("TextButton")
@@ -11,18 +11,20 @@ local susy2 = Instance.new("TextButton")
 local pepescriptloop = Instance.new("TextButton")
 local loopogemote = Instance.new("TextButton")
 local loopsusy2 = Instance.new("TextButton")
+local toggle = Instance.new("TextButton")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+susyarms.Name = "susy arms"
+susyarms.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+susyarms.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Frame.Parent = ScreenGui
+Frame.Parent = susyarms
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.32614556, 0, 0.111454047, 0)
-Frame.Size = UDim2.new(0, 465, 0, 197)
+Frame.Position = UDim2.new(0.190700814, 0, 0.10116598, 0)
+Frame.Size = UDim2.new(0, 416, 0, 170)
 
 pepescript.Name = "pepe script"
 pepescript.Parent = Frame
@@ -40,7 +42,7 @@ ogemote.Parent = Frame
 ogemote.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
 ogemote.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ogemote.BorderSizePixel = 0
-ogemote.Position = UDim2.new(0.309677422, 0, 0, 0)
+ogemote.Position = UDim2.new(0.343331277, 0, 0, 0)
 ogemote.Size = UDim2.new(0, 108, 0, 50)
 ogemote.Font = Enum.Font.SourceSansBold
 ogemote.Text = "the good old days"
@@ -52,7 +54,7 @@ susy2.Parent = Frame
 susy2.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
 susy2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 susy2.BorderSizePixel = 0
-susy2.Position = UDim2.new(0.569892466, 0, 0, 0)
+susy2.Position = UDim2.new(0.639603972, 0, 0, 0)
 susy2.Size = UDim2.new(0, 105, 0, 50)
 susy2.Font = Enum.Font.SourceSansBold
 susy2.Text = "put hand up ash"
@@ -76,7 +78,7 @@ loopogemote.Parent = Frame
 loopogemote.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
 loopogemote.BorderColor3 = Color3.fromRGB(0, 0, 0)
 loopogemote.BorderSizePixel = 0
-loopogemote.Position = UDim2.new(0.309677422, 0, 0.446700513, 0)
+loopogemote.Position = UDim2.new(0.343331277, 0, 0.446700513, 0)
 loopogemote.Size = UDim2.new(0, 108, 0, 50)
 loopogemote.Font = Enum.Font.SourceSansBold
 loopogemote.Text = "loop og emote"
@@ -88,16 +90,28 @@ loopsusy2.Parent = Frame
 loopsusy2.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
 loopsusy2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 loopsusy2.BorderSizePixel = 0
-loopsusy2.Position = UDim2.new(0.569892466, 0, 0.446700513, 0)
+loopsusy2.Position = UDim2.new(0.639603972, 0, 0.446700513, 0)
 loopsusy2.Size = UDim2.new(0, 105, 0, 50)
 loopsusy2.Font = Enum.Font.SourceSansBold
 loopsusy2.Text = "put hand up ash"
 loopsusy2.TextColor3 = Color3.fromRGB(0, 0, 0)
 loopsusy2.TextSize = 15.000
 
+toggle.Name = "toggle"
+toggle.Parent = susyarms
+toggle.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+toggle.BorderSizePixel = 0
+toggle.Position = UDim2.new(0.556603789, 0, 0.222908095, 0)
+toggle.Size = UDim2.new(0, 38, 0, 38)
+toggle.Font = Enum.Font.SourceSansBold
+toggle.Text = "X"
+toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+toggle.TextSize = 28.000
+
 -- Scripts:
 
-local function ZDICUSP_fake_script() -- pepescript.Script 
+local function QXXNBK_fake_script() -- pepescript.Script 
 	local script = Instance.new('Script', pepescript)
 
 	function Click(mouse)
@@ -115,8 +129,8 @@ local function ZDICUSP_fake_script() -- pepescript.Script
 	
 	script.Parent.MouseButton1Down:connect(Click)
 end
-coroutine.wrap(ZDICUSP_fake_script)()
-local function SKKMXXF_fake_script() -- ogemote.Script 
+coroutine.wrap(QXXNBK_fake_script)()
+local function RQWYJV_fake_script() -- ogemote.Script 
 	local script = Instance.new('Script', ogemote)
 
 	function Click(mouse)
@@ -131,8 +145,8 @@ local function SKKMXXF_fake_script() -- ogemote.Script
 	
 	script.Parent.MouseButton1Down:connect(Click)
 end
-coroutine.wrap(SKKMXXF_fake_script)()
-local function GMEHCY_fake_script() -- susy2.Script 
+coroutine.wrap(RQWYJV_fake_script)()
+local function HUUP_fake_script() -- susy2.Script 
 	local script = Instance.new('Script', susy2)
 
 	function Click(mouse)
@@ -148,8 +162,8 @@ local function GMEHCY_fake_script() -- susy2.Script
 	
 	script.Parent.MouseButton1Down:connect(Click)
 end
-coroutine.wrap(GMEHCY_fake_script)()
-local function AGDRPM_fake_script() -- pepescriptloop.Script 
+coroutine.wrap(HUUP_fake_script)()
+local function OTQC_fake_script() -- pepescriptloop.Script 
 	local script = Instance.new('Script', pepescriptloop)
 
 	function Click(mouse)
@@ -172,8 +186,8 @@ local function AGDRPM_fake_script() -- pepescriptloop.Script
 	
 	script.Parent.MouseButton1Down:connect(Click)
 end
-coroutine.wrap(AGDRPM_fake_script)()
-local function PAAUAR_fake_script() -- loopogemote.Script 
+coroutine.wrap(OTQC_fake_script)()
+local function TNWAOY_fake_script() -- loopogemote.Script 
 	local script = Instance.new('Script', loopogemote)
 
 	function Click(mouse)
@@ -195,8 +209,8 @@ local function PAAUAR_fake_script() -- loopogemote.Script
 	
 	script.Parent.MouseButton1Down:connect(Click)
 end
-coroutine.wrap(PAAUAR_fake_script)()
-local function EPDKJ_fake_script() -- loopsusy2.Script 
+coroutine.wrap(TNWAOY_fake_script)()
+local function POZFVK_fake_script() -- loopsusy2.Script 
 	local script = Instance.new('Script', loopsusy2)
 
 	function Click(mouse)
@@ -219,4 +233,131 @@ local function EPDKJ_fake_script() -- loopsusy2.Script
 	
 	script.Parent.MouseButton1Down:connect(Click)
 end
-coroutine.wrap(EPDKJ_fake_script)()
+coroutine.wrap(POZFVK_fake_script)()
+local function RENHYJ_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local dragger = {}; 
+	local resizer = {};
+	
+	do
+		local mouse = game:GetService("Players").LocalPlayer:GetMouse();
+		local inputService = game:GetService('UserInputService');
+		local heartbeat = game:GetService("RunService").Heartbeat;
+		-- // credits to Ririchi / Inori for this cute drag function :)
+		function dragger.new(frame)
+			local s, event = pcall(function()
+				return frame.MouseEnter
+			end)
+	
+			if s then
+				frame.Active = true;
+	
+				event:connect(function()
+					local input = frame.InputBegan:connect(function(key)
+						if key.UserInputType == Enum.UserInputType.MouseButton1 then
+							local objectPosition = Vector2.new(mouse.X - frame.AbsolutePosition.X, mouse.Y - frame.AbsolutePosition.Y);
+							while heartbeat:wait() and inputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) do
+								frame:TweenPosition(UDim2.new(0, mouse.X - objectPosition.X + (frame.Size.X.Offset * frame.AnchorPoint.X), 0, mouse.Y - objectPosition.Y + (frame.Size.Y.Offset * frame.AnchorPoint.Y)), 'Out', 'Quad', 0.1, true);
+							end
+						end
+					end)
+	
+					local leave;
+					leave = frame.MouseLeave:connect(function()
+						input:disconnect();
+						leave:disconnect();
+					end)
+				end)
+			end
+		end
+	
+		function resizer.new(p, s)
+			p:GetPropertyChangedSignal('AbsoluteSize'):connect(function()
+				s.Size = UDim2.new(s.Size.X.Scale, s.Size.X.Offset, s.Size.Y.Scale, p.AbsoluteSize.Y);
+			end)
+		end
+	end
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end
+coroutine.wrap(RENHYJ_fake_script)()
+local function KELM_fake_script() -- toggle.dragger 
+	local script = Instance.new('LocalScript', toggle)
+
+	local dragger = {}; 
+	local resizer = {};
+	
+	do
+		local mouse = game:GetService("Players").LocalPlayer:GetMouse();
+		local inputService = game:GetService('UserInputService');
+		local heartbeat = game:GetService("RunService").Heartbeat;
+		-- // credits to Ririchi / Inori for this cute drag function :)
+		function dragger.new(frame)
+			local s, event = pcall(function()
+				return frame.MouseEnter
+			end)
+	
+			if s then
+				frame.Active = true;
+	
+				event:connect(function()
+					local input = frame.InputBegan:connect(function(key)
+						if key.UserInputType == Enum.UserInputType.MouseButton1 then
+							local objectPosition = Vector2.new(mouse.X - frame.AbsolutePosition.X, mouse.Y - frame.AbsolutePosition.Y);
+							while heartbeat:wait() and inputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) do
+								frame:TweenPosition(UDim2.new(0, mouse.X - objectPosition.X + (frame.Size.X.Offset * frame.AnchorPoint.X), 0, mouse.Y - objectPosition.Y + (frame.Size.Y.Offset * frame.AnchorPoint.Y)), 'Out', 'Quad', 0.1, true);
+							end
+						end
+					end)
+	
+					local leave;
+					leave = frame.MouseLeave:connect(function()
+						input:disconnect();
+						leave:disconnect();
+					end)
+				end)
+			end
+		end
+	
+		function resizer.new(p, s)
+			p:GetPropertyChangedSignal('AbsoluteSize'):connect(function()
+				s.Size = UDim2.new(s.Size.X.Scale, s.Size.X.Offset, s.Size.Y.Scale, p.AbsoluteSize.Y);
+			end)
+		end
+	end
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+end
+coroutine.wrap(KELM_fake_script)()
+local function WKRH_fake_script() -- toggle.LocalScript 
+	local script = Instance.new('LocalScript', toggle)
+
+	local back = script.Parent.Parent.Frame
+	local con = script.Parent.Parent.Frame
+	
+	local window = {
+		count = 0;
+		toggles = {},
+		closed = false;
+	}
+	script.Parent.MouseButton1Click:connect(function()
+		window.closed = not window.closed
+		script.Parent.Text = (window.closed and "+" or "-")
+		if script.Parent.Text == "+" then
+			back:TweenSize(UDim2.new(0, 190,0, 0), "Out", "Sine", 0.5)
+			con:TweenSize(UDim2.new(0, 190,0, 0), "Out", "Sine", 0.5)
+			wait(0.1) do
+				con.Visible = false
+			end
+		else
+			back:TweenSize(UDim2.new(0, 416,0, 170), "Out", "Sine", 0.5)
+			con:TweenSize(UDim2.new(0, 416,0, 170), "Out", "Sine", 0.5)
+			wait(0.2) do
+				con.Visible = true
+			end
+		end
+	
+	end)
+end
+coroutine.wrap(WKRH_fake_script)()
