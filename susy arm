@@ -1,0 +1,222 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local pepescript = Instance.new("TextButton")
+local ogemote = Instance.new("TextButton")
+local susy2 = Instance.new("TextButton")
+local pepescriptloop = Instance.new("TextButton")
+local loopogemote = Instance.new("TextButton")
+local loopsusy2 = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.32614556, 0, 0.111454047, 0)
+Frame.Size = UDim2.new(0, 465, 0, 197)
+
+pepescript.Name = "pepe script"
+pepescript.Parent = Frame
+pepescript.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+pepescript.BorderColor3 = Color3.fromRGB(0, 0, 0)
+pepescript.BorderSizePixel = 0
+pepescript.Size = UDim2.new(0, 129, 0, 50)
+pepescript.Font = Enum.Font.SourceSansBold
+pepescript.Text = "fe pepe script"
+pepescript.TextColor3 = Color3.fromRGB(0, 0, 0)
+pepescript.TextSize = 17.000
+
+ogemote.Name = "og emote"
+ogemote.Parent = Frame
+ogemote.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+ogemote.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ogemote.BorderSizePixel = 0
+ogemote.Position = UDim2.new(0.309677422, 0, 0, 0)
+ogemote.Size = UDim2.new(0, 108, 0, 50)
+ogemote.Font = Enum.Font.SourceSansBold
+ogemote.Text = "the good old days"
+ogemote.TextColor3 = Color3.fromRGB(0, 0, 0)
+ogemote.TextSize = 16.000
+
+susy2.Name = "susy2"
+susy2.Parent = Frame
+susy2.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
+susy2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+susy2.BorderSizePixel = 0
+susy2.Position = UDim2.new(0.569892466, 0, 0, 0)
+susy2.Size = UDim2.new(0, 105, 0, 50)
+susy2.Font = Enum.Font.SourceSansBold
+susy2.Text = "put hand up ash"
+susy2.TextColor3 = Color3.fromRGB(0, 0, 0)
+susy2.TextSize = 15.000
+
+pepescriptloop.Name = "pepe script loop"
+pepescriptloop.Parent = Frame
+pepescriptloop.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+pepescriptloop.BorderColor3 = Color3.fromRGB(0, 0, 0)
+pepescriptloop.BorderSizePixel = 0
+pepescriptloop.Position = UDim2.new(0, 0, 0.446700513, 0)
+pepescriptloop.Size = UDim2.new(0, 129, 0, 50)
+pepescriptloop.Font = Enum.Font.SourceSansBold
+pepescriptloop.Text = "loop fe pepe script"
+pepescriptloop.TextColor3 = Color3.fromRGB(0, 0, 0)
+pepescriptloop.TextSize = 17.000
+
+loopogemote.Name = "loop og emote"
+loopogemote.Parent = Frame
+loopogemote.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+loopogemote.BorderColor3 = Color3.fromRGB(0, 0, 0)
+loopogemote.BorderSizePixel = 0
+loopogemote.Position = UDim2.new(0.309677422, 0, 0.446700513, 0)
+loopogemote.Size = UDim2.new(0, 108, 0, 50)
+loopogemote.Font = Enum.Font.SourceSansBold
+loopogemote.Text = "loop og emote"
+loopogemote.TextColor3 = Color3.fromRGB(0, 0, 0)
+loopogemote.TextSize = 16.000
+
+loopsusy2.Name = "loop susy2"
+loopsusy2.Parent = Frame
+loopsusy2.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
+loopsusy2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+loopsusy2.BorderSizePixel = 0
+loopsusy2.Position = UDim2.new(0.569892466, 0, 0.446700513, 0)
+loopsusy2.Size = UDim2.new(0, 105, 0, 50)
+loopsusy2.Font = Enum.Font.SourceSansBold
+loopsusy2.Text = "put hand up ash"
+loopsusy2.TextColor3 = Color3.fromRGB(0, 0, 0)
+loopsusy2.TextSize = 15.000
+
+-- Scripts:
+
+local function ZDICUSP_fake_script() -- pepescript.Script 
+	local script = Instance.new('Script', pepescript)
+
+	function Click(mouse)
+	
+		
+			local args = {
+				[1] = CFrame.new(-0.09, -0.8, -0.55) * CFrame.Angles(7.5, 6.45, 5.6)
+			}
+	
+			game:GetService("Players").LocalPlayer.Character.ArmAngleChange:FireServer(unpack(args))
+		
+	
+	end
+	
+	
+	script.Parent.MouseButton1Down:connect(Click)
+end
+coroutine.wrap(ZDICUSP_fake_script)()
+local function SKKMXXF_fake_script() -- ogemote.Script 
+	local script = Instance.new('Script', ogemote)
+
+	function Click(mouse)
+	
+		local args = {
+			[1] = CFrame.new(0.9160000085830688, 0.6031519174575806, 0.019247889518737793) * CFrame.Angles(-0, 0, -0)
+		}
+	
+		game:GetService("Players").LocalPlayer.Character.ArmAngleChange:FireServer(unpack(args))
+	end
+	
+	
+	script.Parent.MouseButton1Down:connect(Click)
+end
+coroutine.wrap(SKKMXXF_fake_script)()
+local function GMEHCY_fake_script() -- susy2.Script 
+	local script = Instance.new('Script', susy2)
+
+	function Click(mouse)
+	
+		local args = {
+			[1] = CFrame.new(-0.9, -1, 1) * CFrame.Angles(7.2, 6, 6.5)
+		}
+	
+		game:GetService("Players").LocalPlayer.Character.ArmAngleChange:FireServer(unpack(args))
+	
+	end
+	
+	
+	script.Parent.MouseButton1Down:connect(Click)
+end
+coroutine.wrap(GMEHCY_fake_script)()
+local function AGDRPM_fake_script() -- pepescriptloop.Script 
+	local script = Instance.new('Script', pepescriptloop)
+
+	function Click(mouse)
+	
+		spawn(function( )
+		_G.ArmAngleChange = true
+		
+		while _G.ArmAngleChange == true do
+			local args = {
+				[1] = CFrame.new(-0.09, -0.8, -0.55) * CFrame.Angles(7.5, 6.45, 5.6)
+			}
+	
+			game:GetService("Players").LocalPlayer.Character.ArmAngleChange:FireServer(unpack(args))
+		wait( )
+		end
+		end)
+	
+	end
+	
+	
+	script.Parent.MouseButton1Down:connect(Click)
+end
+coroutine.wrap(AGDRPM_fake_script)()
+local function PAAUAR_fake_script() -- loopogemote.Script 
+	local script = Instance.new('Script', loopogemote)
+
+	function Click(mouse)
+	
+		spawn(function( )
+	_G.ArmAngleChange = true
+	
+	while _G.ArmAngleChange == true do
+		local args = {
+			[1] = CFrame.new(0.9160000085830688, 0.6031519174575806, 0.019247889518737793) * CFrame.Angles(-0, 0, -0)
+		}
+	
+		game:GetService("Players").LocalPlayer.Character.ArmAngleChange:FireServer(unpack(args))
+		wait( )
+	end
+	end)
+	end
+	
+	
+	script.Parent.MouseButton1Down:connect(Click)
+end
+coroutine.wrap(PAAUAR_fake_script)()
+local function EPDKJ_fake_script() -- loopsusy2.Script 
+	local script = Instance.new('Script', loopsusy2)
+
+	function Click(mouse)
+	
+	spawn(function( )
+	_G.ArmAngleChange = true
+	
+	while _G.ArmAngleChange == true do
+	
+		local args = {
+			[1] = CFrame.new(-0.9, -1, 1) * CFrame.Angles(7.2, 6, 6.5)
+		}
+	
+		game:GetService("Players").LocalPlayer.Character.ArmAngleChange:FireServer(unpack(args))
+	wait( )
+	end
+	end)
+	end
+	
+	
+	script.Parent.MouseButton1Down:connect(Click)
+end
+coroutine.wrap(EPDKJ_fake_script)()
