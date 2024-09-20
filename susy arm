@@ -11,6 +11,7 @@ local susy2 = Instance.new("TextButton")
 local pepescriptloop = Instance.new("TextButton")
 local loopogemote = Instance.new("TextButton")
 local loopsusy2 = Instance.new("TextButton")
+local stoploops = Instance.new("TextButton")
 local toggle = Instance.new("TextButton")
 
 --Properties:
@@ -18,6 +19,7 @@ local toggle = Instance.new("TextButton")
 susyarms.Name = "susy arms"
 susyarms.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 susyarms.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+susyarms.ResetOnSpawn = false
 
 Frame.Parent = susyarms
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
@@ -93,9 +95,21 @@ loopsusy2.BorderSizePixel = 0
 loopsusy2.Position = UDim2.new(0.639603972, 0, 0.446700513, 0)
 loopsusy2.Size = UDim2.new(0, 105, 0, 50)
 loopsusy2.Font = Enum.Font.SourceSansBold
-loopsusy2.Text = "put hand up ash"
+loopsusy2.Text = "loop put hand up ash"
 loopsusy2.TextColor3 = Color3.fromRGB(0, 0, 0)
-loopsusy2.TextSize = 15.000
+loopsusy2.TextSize = 13.000
+
+stoploops.Name = "stop loops"
+stoploops.Parent = Frame
+stoploops.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+stoploops.BorderColor3 = Color3.fromRGB(0, 0, 0)
+stoploops.BorderSizePixel = 0
+stoploops.Position = UDim2.new(0.269230783, 0, 0.823529422, 0)
+stoploops.Size = UDim2.new(0, 154, 0, 30)
+stoploops.Font = Enum.Font.SourceSansBold
+stoploops.Text = "stop loops"
+stoploops.TextColor3 = Color3.fromRGB(0, 0, 0)
+stoploops.TextSize = 18.000
 
 toggle.Name = "toggle"
 toggle.Parent = susyarms
@@ -111,7 +125,7 @@ toggle.TextSize = 28.000
 
 -- Scripts:
 
-local function QXXNBK_fake_script() -- pepescript.Script 
+local function PYWR_fake_script() -- pepescript.Script 
 	local script = Instance.new('Script', pepescript)
 
 	function Click(mouse)
@@ -129,8 +143,8 @@ local function QXXNBK_fake_script() -- pepescript.Script
 	
 	script.Parent.MouseButton1Down:connect(Click)
 end
-coroutine.wrap(QXXNBK_fake_script)()
-local function RQWYJV_fake_script() -- ogemote.Script 
+coroutine.wrap(PYWR_fake_script)()
+local function JLIRWOG_fake_script() -- ogemote.Script 
 	local script = Instance.new('Script', ogemote)
 
 	function Click(mouse)
@@ -145,8 +159,8 @@ local function RQWYJV_fake_script() -- ogemote.Script
 	
 	script.Parent.MouseButton1Down:connect(Click)
 end
-coroutine.wrap(RQWYJV_fake_script)()
-local function HUUP_fake_script() -- susy2.Script 
+coroutine.wrap(JLIRWOG_fake_script)()
+local function HPVFY_fake_script() -- susy2.Script 
 	local script = Instance.new('Script', susy2)
 
 	function Click(mouse)
@@ -162,8 +176,8 @@ local function HUUP_fake_script() -- susy2.Script
 	
 	script.Parent.MouseButton1Down:connect(Click)
 end
-coroutine.wrap(HUUP_fake_script)()
-local function OTQC_fake_script() -- pepescriptloop.Script 
+coroutine.wrap(HPVFY_fake_script)()
+local function RNMUW_fake_script() -- pepescriptloop.Script 
 	local script = Instance.new('Script', pepescriptloop)
 
 	function Click(mouse)
@@ -186,8 +200,8 @@ local function OTQC_fake_script() -- pepescriptloop.Script
 	
 	script.Parent.MouseButton1Down:connect(Click)
 end
-coroutine.wrap(OTQC_fake_script)()
-local function TNWAOY_fake_script() -- loopogemote.Script 
+coroutine.wrap(RNMUW_fake_script)()
+local function KVIADL_fake_script() -- loopogemote.Script 
 	local script = Instance.new('Script', loopogemote)
 
 	function Click(mouse)
@@ -209,8 +223,8 @@ local function TNWAOY_fake_script() -- loopogemote.Script
 	
 	script.Parent.MouseButton1Down:connect(Click)
 end
-coroutine.wrap(TNWAOY_fake_script)()
-local function POZFVK_fake_script() -- loopsusy2.Script 
+coroutine.wrap(KVIADL_fake_script)()
+local function RYPJDD_fake_script() -- loopsusy2.Script 
 	local script = Instance.new('Script', loopsusy2)
 
 	function Click(mouse)
@@ -233,8 +247,8 @@ local function POZFVK_fake_script() -- loopsusy2.Script
 	
 	script.Parent.MouseButton1Down:connect(Click)
 end
-coroutine.wrap(POZFVK_fake_script)()
-local function RENHYJ_fake_script() -- Frame.LocalScript 
+coroutine.wrap(RYPJDD_fake_script)()
+local function EDRTSZ_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local dragger = {}; 
@@ -281,8 +295,21 @@ local function RENHYJ_fake_script() -- Frame.LocalScript
 	script.Parent.Active = true
 	script.Parent.Draggable = true
 end
-coroutine.wrap(RENHYJ_fake_script)()
-local function KELM_fake_script() -- toggle.dragger 
+coroutine.wrap(EDRTSZ_fake_script)()
+local function VXYQV_fake_script() -- stoploops.Script 
+	local script = Instance.new('Script', stoploops)
+
+	function Click(mouse)
+	
+		_G.ArmAngleChange = false
+	
+	end
+	
+	
+	script.Parent.MouseButton1Down:connect(Click)
+end
+coroutine.wrap(VXYQV_fake_script)()
+local function BVPCCA_fake_script() -- toggle.dragger 
 	local script = Instance.new('LocalScript', toggle)
 
 	local dragger = {}; 
@@ -329,8 +356,8 @@ local function KELM_fake_script() -- toggle.dragger
 	script.Parent.Active = true
 	script.Parent.Draggable = true
 end
-coroutine.wrap(KELM_fake_script)()
-local function WKRH_fake_script() -- toggle.LocalScript 
+coroutine.wrap(BVPCCA_fake_script)()
+local function LVPYA_fake_script() -- toggle.LocalScript 
 	local script = Instance.new('LocalScript', toggle)
 
 	local back = script.Parent.Parent.Frame
@@ -360,4 +387,4 @@ local function WKRH_fake_script() -- toggle.LocalScript
 	
 	end)
 end
-coroutine.wrap(WKRH_fake_script)()
+coroutine.wrap(LVPYA_fake_script)()
