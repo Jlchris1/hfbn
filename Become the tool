@@ -1,0 +1,119 @@
+-- LocalScript inside StarterPlayerScripts
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+-- GUI Setup
+local screenGui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+screenGui.Name = "ToolControlGUI"
+
+local function createButton(name, position, text, parent)
+    local button = Instance.new("TextButton")
+    button.Size = UDim2.new(0, 200, 0, 50)
+    button.Position = position
+    button.Text = text
+    button.Name = name
+    button.BackgroundColor3 = Color3.fromRGB(50, 150, 255)
+    button.TextColor3 = Color3.new(1, 1, 1)
+    button.Font = Enum.Font.SourceSansBold
+    button.TextSize = 20
+    button.Parent = parent
+    return button
+end
+
+local toggleButton = createButton("ToggleMain", UDim2.new(0.5, -100, 0.7, 0), "Start Tool Loop", screenGui)
+local npcToggle = createButton("ToggleNPC", UDim2.new(0.5, -100, 0.8, 0), "Target NPCs: OFF", screenGui)
+local statusLabel = Instance.new("TextLabel", screenGui)
+statusLabel.Size = UDim2.new(0, 200, 0, 40)
+statusLabel.Position = UDim2.new(0.5, -100, 0.9, 0)
+statusLabel.BackgroundTransparency = 1
+statusLabel.TextColor3 = Color3.new(1, 1, 1)
+statusLabel.Font = Enum.Font.SourceSansBold
+statusLabel.TextSize = 20
+statusLabel.Text = "Status: Idle"
+
+-- Toggle states
+local running = false
+local npcOnly = false
+
+local function setToolTargets(tool)
+    if tool:FindFirstChild("TargetAll") then
+        tool.TargetAll.Value = 1
+    end
+    if tool:FindFirstChild("TargetNonFriends") then
+        if npcOnly then
+            tool.TargetNonFriends.Value = 0
+            statusLabel.Text = "Status: NPCs Only"
+        else
+            tool.TargetNonFriends.Value = 1
+            statusLabel.Text = "Status: All/NonFriends"
+        end
+    end
+end
+
+local function weldToCharacter(tool, character)
+    for _, part in ipairs(tool:GetDescendants()) do
+        if part:IsA("BasePart") then
+            part.Anchored = false
+            part.CFrame = character.HumanoidRootPart.CFrame
+            local weld = Instance.new("WeldConstraint")
+            weld.Part0 = part
+            weld.Part1 = character.HumanoidRootPart
+            weld.Parent = part
+        end
+    end
+end
+
+local function processTool(tool)
+    if not tool or not player.Character then return end
+    setToolTargets(tool)
+    weldToCharacter(tool, player.Character)
+end
+
+local function getEquippedTool()
+    if player.Character then
+        for _, item in ipairs(player.Character:GetChildren()) do
+            if item:IsA("Tool") then
+                return item
+            end
+        end
+    end
+    return nil
+end
+
+local function startLoop()
+    coroutine.wrap(function()
+        local currentTool = nil
+        while running do
+            if not player.Character or not player.Character:FindFirstChild("Humanoid") then
+                player.CharacterAdded:Wait()
+                wait(1)
+            end
+
+            local tool = getEquippedTool()
+            if tool and tool ~= currentTool then
+                currentTool = tool
+                processTool(tool)
+            end
+            wait(0.5)
+        end
+    end)()
+end
+
+-- Button Actions
+toggleButton.MouseButton1Click:Connect(function()
+    running = not running
+    toggleButton.Text = running and "Stop Tool Loop" or "Start Tool Loop"
+    toggleButton.BackgroundColor3 = running and Color3.fromRGB(255, 100, 100) or Color3.fromRGB(50, 150, 255)
+    if running then
+        startLoop()
+    else
+        statusLabel.Text = "Status: Idle"
+    end
+end)
+
+npcToggle.MouseButton1Click:Connect(function()
+    npcOnly = not npcOnly
+    npcToggle.Text = npcOnly and "Target NPCs: ON" or "Target NPCs: OFF"
+    npcToggle.BackgroundColor3 = npcOnly and Color3.fromRGB(100, 200, 100) or Color3.fromRGB(50, 150, 255)
+end)
